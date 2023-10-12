@@ -171,5 +171,4 @@ Once you've completed the assignment and are ready to submit your work, use the 
 python submit.py
 ```
 
-This will initiate the submission process and ensure your efforts are properly recorded and evaluated. Good luck with
-your assignment!
+This will create a zip file named `hw2.zip` in the project's root directory. Submit this file to the [BRUTE](https://cw.felk.cvut.cz/brute/student/) system.

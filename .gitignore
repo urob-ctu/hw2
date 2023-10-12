@@ -8,3 +8,4 @@ data/videos/*
 !data/videos/.gitkeep
 
 .idea/
+*.zip

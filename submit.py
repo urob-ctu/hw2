@@ -64,7 +64,7 @@ def create_html_files(jupyter_files: list, remove_original: bool = True):
 if __name__ == "__main__":
     root_path = os.path.dirname(os.path.realpath(__file__))
 
-    output_file = os.path.join(root_path, "submission.zip")
+    output_file = os.path.join(root_path, "hw2.zip")
 
     notebooks_folder = os.path.join(root_path, "notebooks")
     assignments_folder = os.path.join(root_path, ASSIGNMENTS_FOLDER)
