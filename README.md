@@ -8,7 +8,7 @@ classification - its understanding and implementation.
 
 - [What will you learn?](#what-will-you-learn)
 - [Getting started](#getting-started)
-- [Working on the assignment](#working-on-the-assignment)
+- [Working on the assignments](#working-on-the-assignments)
 - [How to submit](#how-to-submit)
 
 ## What will you learn?
@@ -95,14 +95,17 @@ To begin your journey with this assignment, follow these simple steps:
    executing:
 
     ```shell
-    conda env create -f environment.yml
+    conda env create --name hw2 --file environment.yaml
     ```
 
    After the environment is created, activate it with:
 
     ```shell
-    conda activate classification
+    conda activate hw2
     ```
+   
+   If you are using a different environment manager, please refer to the documentation for the appropriate 
+   commands and make sure you have Python 3.10 installed.
 
 3. **Choose Your IDE**: Next, open the project in your preferred Integrated Development Environment (IDE). While we
    suggest PyCharm, the choice ultimately lies with you.
@@ -114,21 +117,24 @@ To begin your journey with this assignment, follow these simple steps:
    of alternative Integrated Development Environments (IDEs), please locate the analogous setting. Failing to make this
    adjustment could result in images that might not look as visually appealing as intended. :)
 
-## Working on the Assignment
+4. **Copy Your Autograd Engine**: In the previous homework, you implemented a custom autograd engine. Copy the
+   `engine.py` file from the previous homework into the `utils` directory of this homework.
 
-The assignment is divided into several sections, each residing in its own notebook. You can locate these notebooks in
+## Working on the Assignments
+
+The homework is divided into several sections, each residing in its own notebook. You can locate these notebooks in
 the project's root directory. To make steady progress, adhere to the following sequence:
 
-1. [K-Nearest Neighbors Introduction](knn_intro.ipynb)
-2. [K-Nearest Neighbors CIFAR-10](knn_cifar.ipynb)
-3. [Linear Classifier Introduction](linear_intro.ipynb)
-4. [Linear Classifier CIFAR-10](linear_cifar.ipynb)
-5. [Neural Network Classifier](neural_network.ipynb)
+1. [K-Nearest Neighbors Introduction](knn_part_1.ipynb)
+2. [K-Nearest Neighbors CIFAR-10](knn_part_2.ipynb)
+3. [Linear Classifier Introduction](linear_part_1.ipynb)
+4. [Linear Classifier CIFAR-10](linear_part_2.ipynb)
+5. [Neural Network Classifier](mlp_part_1.ipynb)
+6. [Neural Network Classifier](mlp_part_2.ipynb)
 
 Inside each notebook, you will find task descriptions and the specific files you need to modify. These editable files
 are situated in the `assignments` directory. Please refrain from altering any other files. Within these designated
-files,
-make changes only to sections resembling the following:
+files, make changes only to sections resembling the following:
 
 ```python
 # ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱ Assignment 1.1 ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰ #
@@ -148,7 +154,14 @@ make changes only to sections resembling the following:
 # 🌀 TERMINATION 🌀 (Your code reaches its end. 🏁 Do not delete this line.)
 ```
 
-Remember, any modifications outside of this designated section will prevent you from submitting your solution.
+Remember, any modifications outside of this designated section can cause the autograder to fail, resulting in a
+suboptimal grade. If you have any questions, please reach out to the teaching assistants.
+
+To test your code, you can run the following command in your terminal:
+
+```shell
+python test_assignments.py
+```
 
 ## How to submit
 
