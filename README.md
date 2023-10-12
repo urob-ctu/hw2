@@ -125,12 +125,12 @@ To begin your journey with this assignment, follow these simple steps:
 The homework is divided into several sections, each residing in its own notebook. You can locate these notebooks in
 the project's root directory. To make steady progress, adhere to the following sequence:
 
-1. [K-Nearest Neighbors Introduction](knn_part_1.ipynb)
-2. [K-Nearest Neighbors CIFAR-10](knn_part_2.ipynb)
-3. [Linear Classifier Introduction](linear_part_1.ipynb)
-4. [Linear Classifier CIFAR-10](linear_part_2.ipynb)
-5. [Neural Network Classifier](mlp_part_1.ipynb)
-6. [Neural Network Classifier](mlp_part_2.ipynb)
+1. [Introduction to k-Nearest Neighbors](knn_part_1.ipynb)
+2. [k-Nearest Neighbors: Hyperparameter Optimization](knn_part_2.ipynb)
+3. [Introduction to Linear Classifiers from a Geometric Perspective](linear_part_1.ipynb)
+4. [Linear Classifier as a Template Matching Algorithm](linear_part_2.ipynb)
+5. [Introduction to Neural Networks](mlp_part_1.ipynb)
+6. [Training the Multilayer Perceptron](mlp_part_2.ipynb)
 
 Inside each notebook, you will find task descriptions and the specific files you need to modify. These editable files
 are situated in the `assignments` directory. Please refrain from altering any other files. Within these designated
