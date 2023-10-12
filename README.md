@@ -88,7 +88,7 @@ To begin your journey with this assignment, follow these simple steps:
    terminal:
 
     ```shell
-    git clone https://github.com/aleskucera/Classification.git
+    git clone https://github.com/urob-ctu/hw2.git
     ```
 
 2. **Install Dependencies**: We recommend using a conda environment to manage dependencies. Create the environment by
