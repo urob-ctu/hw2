@@ -72,6 +72,10 @@ def cross_validate_knn(classifier: KNNClassifier, X: np.ndarray, y: np.ndarray,
     """
 
     k_to_metrics = dict()
+    k_to_metrics["accuracy"] = dict()
+    k_to_metrics["precision"] = dict()
+    k_to_metrics["recall"] = dict()
+    k_to_metrics["f1"] = dict()
 
     # ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱ Assignment 2.2 ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰ #
     # TODO:                                                             #

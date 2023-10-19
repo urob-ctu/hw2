@@ -5,7 +5,7 @@ from utils.engine import Tensor
 class LinearClassifier:
     def __init__(self, num_features: int, num_classes: int, learning_rate: float = 1e-3,
                  weight_scale: float = 1e-4, batch_size: int = 100,
-                 num_iters: int = 1000, verbose: bool = True):
+                 num_iters: int = 1000, verbose: bool = True, reg: float = 1e-3):
 
         self.num_classes = num_classes
         self.num_features = num_features
@@ -15,6 +15,7 @@ class LinearClassifier:
         self.batch_size = batch_size
         self.weight_scale = weight_scale
         self.learning_rate = learning_rate
+        self.reg = reg
 
         self.W = Tensor(np.random.randn(num_features, num_classes) * weight_scale, req_grad=True)
         self.b = Tensor(np.zeros(num_classes), req_grad=True)
@@ -61,12 +62,19 @@ class LinearClassifier:
             # ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱ Assignment 3.2 ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰ #
             # TODO:                                                             #
             # Implement one iteration of the training loop. Use the computed    #
-            # scores to compute the Softmax Cross Entropy Loss and store it     #
-            # to the variable `loss`. Then, compute the backward pass and       #
-            # update the weights and biases of the model. After that zero out   #
-            # the gradients of the weights and biases.                          #
+            # scores to compute the Cross Entropy Loss, add the regularization  #
+            # loss of all parameters and store it to the variable `loss`.       #
+            # Then, compute the backward pass and update the weights and biases #
+            # of the model. After that zero out the gradients of the weights    #
+            # and biases.                                                       #
             #                                                                   #
-            # HINT: Use only already implemented functions of the Tensor class. #
+            # HINT: - Use only already implemented functions of the Tensor      #
+            #         class.                                                    #
+            #       - Do not forget to add the regularization loss              #
+            #         (defined in Tensor class) of ALL parameters. Use self.reg #
+            #         as the regularization strength.                           #
+            #       - Call step() on the `loss` variable to update              #
+            #         the parameters.                                           #
             #                                                                   #
             # Good luck!                                                        #
             # ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰ #
@@ -98,6 +106,7 @@ class LinearClassifier:
         """
 
         scores = Tensor(np.zeros((X.shape[0], self.num_classes)), req_grad=False)
+        X = Tensor(X)
 
         # ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱ Assignment 3.1 ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰ #
         # TODO:                                                             #

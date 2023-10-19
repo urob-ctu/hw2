@@ -46,6 +46,10 @@ class MLPClassifier:
         # TODO:                                                             #
         # Implement the first layer of the MLP.                             #
         #                                                                   #
+        # Hint: You may want to use the `self.activation` attribute to      #
+        #       determine which activation function to use.                 #
+        #       (It can be either 'relu', 'sigmoid', or 'tanh'. All of them #
+        #       are implemented in the Tensor class.)                       #
         # Good luck!                                                        #
         # ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰ #
         # 🌀 INCEPTION 🌀 (Your code begins its journey here. 🚀 Do not delete this line.)
@@ -134,7 +138,7 @@ class MLPClassifier:
 
         out = None
         X = Tensor(X) if isinstance(X, np.ndarray) else X
-        scores = Tensor(np.zeros((X.shape[0], self.num_classes)), req_grad=False)
+        scores = Tensor(np.zeros((X.data.shape[0], self.num_classes)), req_grad=False)
 
         # ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱ Assignment 5.4 ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰ #
         # TODO:                                                             #

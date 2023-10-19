@@ -127,7 +127,8 @@ class KNNClassifier:
         # and refrain from utilizing 'np.linalg.norm()'.                    #
         #                                                                   #
         # Hint: Consider formulating the L2 distance calculation through    #
-        # matrix multiplication and two broadcasted summations.             #
+        # matrix multiplication and two broadcasted summations. (You might  #
+        # want to look this up on the internet.)                            #
         # ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰ #
         # 🌀 INCEPTION 🌀 (Your code begins its journey here. 🚀 Do not delete this line.)
         #
