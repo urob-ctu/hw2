@@ -4,8 +4,8 @@ data/datasets/CIFAR10/
 data/models/*
 !data/models/.gitkeep
 
-data/videos/*
-!data/videos/.gitkeep
+#data/videos/*
+#!data/videos/.gitkeep
 
 .idea/
 *.zip

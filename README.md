@@ -103,8 +103,8 @@ To begin your journey with this assignment, follow these simple steps:
     ```shell
     conda activate hw2
     ```
-   
-   If you are using a different environment manager, please refer to the documentation for the appropriate 
+
+   If you are using a different environment manager, please refer to the documentation for the appropriate
    commands and make sure you have Python 3.10 installed.
 
 3. **Choose Your IDE**: Next, open the project in your preferred Integrated Development Environment (IDE). While we
@@ -116,10 +116,7 @@ To begin your journey with this assignment, follow these simple steps:
    > do it by going to Preferences | Languages & Frameworks | Jupyter | Invert image outputs for dark themes. For users
    of alternative Integrated Development Environments (IDEs), please locate the analogous setting. Failing to make this
    adjustment could result in images that might not look as visually appealing as intended. :)
-
-4. **Copy Your Autograd Engine**: In the previous homework, you implemented a custom autograd engine. Copy the
-   `engine.py` file from the previous homework into the `utils` directory of this homework.
-
+   
 ## Working on the Assignments
 
 The homework is divided into several sections, each residing in its own notebook. You can locate these notebooks in
@@ -127,7 +124,7 @@ the project's root directory. To make steady progress, adhere to the following s
 
 1. [Introduction to k-Nearest Neighbors](knn_part_1.ipynb)
 2. [k-Nearest Neighbors: Hyperparameter Optimization](knn_part_2.ipynb)
-3. [Introduction to Linear Classifiers from a Geometric Perspective](linear_part_1.ipynb)
+3. [Introduction to Linear Classifiers](linear_part_1.ipynb)
 4. [Linear Classifier as a Template Matching Algorithm](linear_part_2.ipynb)
 5. [Introduction to Neural Networks](mlp_part_1.ipynb)
 6. [Training the Multilayer Perceptron](mlp_part_2.ipynb)
@@ -171,4 +168,5 @@ Once you've completed the assignment and are ready to submit your work, use the 
 python submit.py
 ```
 
-This will create a zip file named `hw2.zip` in the project's root directory. Submit this file to the [BRUTE](https://cw.felk.cvut.cz/brute/student/) system.
+This will create a zip file named `hw2.zip` in the project's root directory. Submit this file to
+the [BRUTE](https://cw.felk.cvut.cz/brute/student/) system.
